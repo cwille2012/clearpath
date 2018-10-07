@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Clinic_Captain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ve-ku-D9n">
+                                <rect key="frame" x="0.0" y="617" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.61581165140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetAllNodes:" destination="BV1-FR-VrT" eventType="touchUpInside" id="SCJ-aI-8h0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter room number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZrY-l9-5KD">
+                                <rect key="frame" x="100" y="325" width="175" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fX7-15-SfH">
+                                <rect key="frame" x="100" y="363" width="175" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.61581165140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Clear a Path!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="UJc-LK-oHm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ClearPath" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcO-Rn-WJ6">
+                                <rect key="frame" x="96" y="199" width="183.5" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfr-ol-fiB">
+                                <rect key="frame" x="111" y="312" width="153" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="VCX-Qm-vwf">
+                                <rect key="frame" x="137.5" y="91" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3GS-PL-Kql"/>
+                                    <constraint firstAttribute="width" constant="100" id="nPI-WJ-oTd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2ve-ku-D9n" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="0hn-P5-0VX"/>
+                            <constraint firstItem="VCX-Qm-vwf" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="1Kl-DG-SHZ"/>
+                            <constraint firstItem="VCX-Qm-vwf" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="71" id="5Oq-q6-VKp"/>
+                            <constraint firstItem="dcO-Rn-WJ6" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="6Cy-8p-kcd"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="BFs-E7-vwY"/>
+                            <constraint firstItem="ZrY-l9-5KD" firstAttribute="top" secondItem="dcO-Rn-WJ6" secondAttribute="bottom" constant="37" id="DCH-Lt-9dN"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="DJM-Iu-T4x"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="dcO-Rn-WJ6" firstAttribute="top" secondItem="VCX-Qm-vwf" secondAttribute="bottom" constant="8" id="JfI-4E-5K5"/>
+                            <constraint firstItem="ZrY-l9-5KD" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="100" id="NGJ-rM-gkQ"/>
+                            <constraint firstItem="hfr-ol-fiB" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="Ob8-Ig-xLE"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="fX7-15-SfH" secondAttribute="trailing" constant="100" id="QGL-iL-TtL"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="2ve-ku-D9n" secondAttribute="bottom" constant="20" id="Qcv-xj-auv"/>
+                            <constraint firstItem="fX7-15-SfH" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="100" id="UAi-As-Obh"/>
+                            <constraint firstItem="2ve-ku-D9n" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="UEz-zg-D1b"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="ZrY-l9-5KD" secondAttribute="trailing" constant="100" id="V64-hY-MfO"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="Vad-td-CCj"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="2ve-ku-D9n" secondAttribute="trailing" id="aEA-d1-vIL"/>
+                            <constraint firstItem="hfr-ol-fiB" firstAttribute="centerY" secondItem="U0K-SW-4ec" secondAttribute="centerY" id="axh-I3-qOd"/>
+                            <constraint firstItem="dcO-Rn-WJ6" firstAttribute="top" secondItem="VCX-Qm-vwf" secondAttribute="bottom" constant="8" id="f2q-Cd-J7r"/>
+                            <constraint firstItem="fX7-15-SfH" firstAttribute="top" secondItem="ZrY-l9-5KD" secondAttribute="bottom" constant="8" id="hgy-g9-7MH"/>
+                            <constraint firstItem="dcO-Rn-WJ6" firstAttribute="top" secondItem="VCX-Qm-vwf" secondAttribute="bottom" constant="8" id="hlY-pu-lw0"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="wDq-ZS-soW"/>
+                            <constraint firstItem="VCX-Qm-vwf" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="yqg-Ln-Wrk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadingOutlet" destination="hfr-ol-fiB" id="daZ-Z1-dh0"/>
+                        <outlet property="logoHolder" destination="dcO-Rn-WJ6" id="V4s-bi-UiE"/>
+                        <outlet property="logoOutlet" destination="VCX-Qm-vwf" id="UaY-BV-Ocz"/>
+                        <outlet property="resetButtonOutlet" destination="2ve-ku-D9n" id="RC4-OK-VYr"/>
+                        <outlet property="roomInput" destination="ZrY-l9-5KD" id="GF0-14-wET"/>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="submitButtonOutlet" destination="fX7-15-SfH" id="pHf-td-sDE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="applogo.png" width="512" height="512"/>
+    </resources>
+</document>
